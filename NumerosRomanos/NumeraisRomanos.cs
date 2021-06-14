@@ -16,6 +16,9 @@ namespace NumerosRomanos
             { 'C', 100 },
             { 'D', 500 },
             { 'M', 1000 },
+            { 'Í', 1000 },
+            { 'Ú' , 5000},
+            { 'K', 10000 }
         };
 
         #endregion
@@ -59,7 +62,6 @@ namespace NumerosRomanos
         {
             int numero = 0;
 
-
             VerificarRepeticaoDeNumerais(romano);
 
             string[] arrMacron = { "Ī", "V̄", "X̄" };
@@ -68,9 +70,9 @@ namespace NumerosRomanos
             {
                 if (romano.Contains(arrMacron[i]))
                 {
-                    romano = romano.Replace("Ī", "M");
-                    romano = romano.Replace("V̄", "MMMMM");
-                    romano = romano.Replace("X̄", "MMMMMMMMMM");
+                    romano = romano.Replace("Ī", "Í");
+                    romano = romano.Replace("V̄", "Ú");
+                    romano = romano.Replace("X̄", "K");
                 }
             }
 
